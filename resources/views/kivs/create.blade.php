@@ -163,7 +163,7 @@
                     <div>
                         <div class="div-label">
                             <label>
-                                Организация
+                                Организация (факт.)
                             </label>
                         </div>
 
@@ -188,7 +188,7 @@
 
                         <div class="div-label">
                             <label>
-                                Комитет
+                                Комитет (факт.)
                             </label>
                         </div>
 
@@ -210,7 +210,7 @@
 
                         <div class="div-label">
                             <label>
-                                Управление
+                                Управление (факт.)
                             </label>
                         </div>
 
@@ -232,7 +232,7 @@
 
                         <div class="div-label">
                             <label>
-                                Отдел
+                                Отдел (факт.)
                             </label>
                         </div>
 
@@ -259,7 +259,7 @@
                 </label>
             <div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input list="adr-list"  name="adr" id="adr" value="" style="width:50%"  required>
 
             <datalist id="adr-list" style="width:50%">
@@ -277,7 +277,7 @@
                 </label>
             <div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input type="text" name="position" id="position" value="" placeholder="Должность" required class="position-text" style="width: 50%">
 
             {{-- <br>
@@ -289,7 +289,7 @@
                 </label>
             <div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input type="text" name="kab-number" id="kab-number" value="" placeholder="Введите номер кабинета" required class="position-text" style="width: 50%">
 
             {{-- <br>
@@ -301,7 +301,7 @@
                 </label>
             <div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input type="text" name="pc-number" id="pc-number" value="" placeholder="Введите номер кабинета" required class="pc-number-text" style="width: 50%">
 
             {{-- <br>
@@ -313,7 +313,7 @@
                 </label>
             <div>
 
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input type="text" name="phone" id="phone" value="" placeholder="Введите номер телефона" required class="phone-text" style="width: 50%">
 
             {{-- <br>
@@ -324,7 +324,7 @@
                     Введите фамилию (полностью)
                 </label>
             <div>
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input type="text" name="fname" id="fname" value="" placeholder="Фамилия" required  style="width: 50%">
 
             {{-- <br>
@@ -334,7 +334,7 @@
                     Введите имя (полностью)
                 </label>
             <div>
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input type="text" name="name" id="name" value="" placeholder="Имя" required  style="width: 50%">
 
 
@@ -345,7 +345,7 @@
                     Введите Отчетство (полностью)
                 </label>
             <div>
-            <input type="button" name="login-btn" id="login-btn" value="Х" >
+            <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
             <input type="text" name="sname" id="sfname" value="" placeholder="Отчество" required  style="width: 50%">
 
             {{-- <br>
