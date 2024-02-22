@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/create', function () {
     return view('kivs.create');
 });
+
+Route::get('/kivs/list', function () {
+    return view('kivs.list');
+});
