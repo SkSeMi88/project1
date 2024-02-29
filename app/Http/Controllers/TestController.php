@@ -23,6 +23,9 @@ class TestController extends Controller
         //     'user' => $user,
         // ]);
 
+        $KIVS   = config('kivs.KIVS');
+
+        print_r($KIVS);
         $users = [
             "Скваж Сергей Михайлович",
             "Васильев Сергей Дмитриевич",
@@ -32,16 +35,44 @@ class TestController extends Controller
             "Матюшина Лилия Васильевна"
         ];
 
-        $users_lat  = [];
-        $fname_lat  = [];
-        $name_lat   = [];
-        $sname_lat  = [];
-
 
         foreach ($users as $user) {
             # code...
             echo "<br>";
             print_r($user);
+            $tmp = explode(" ", $user);
+            $fname      = $tmp[0];
+            $name       = $tmp[1];
+            $sname      = $tmp[2];
+
+
+            print_r($tmp);
+            $fname_lat = "";
+            for($i=0; $i<strlen($fname); $i++){
+                // $fname_lat .= $KIVS[$fname[$i]];
+                print("  ");
+                print_r($fname[$i]);
+                // print_r($KIVS[$fname[$i]]);
+            }
+
+            /*
+            $name_lat = "";
+            for($i=0; $i<strlen($name); $i++){
+                $name_lat .= $KIVS[$name[$i]];
+            }
+
+            $aname_lat = "";
+            for($i=0; $i<strlen($sname); $i++){
+                $aname_lat .= $KIVS[$sname[$i]];
+            }
+
+            print_r($fname, $name, $sname);
+            // $users_lat  = [];
+            // $fname_lat  = [];
+            // $name_lat   = [];
+            // $sname_lat  = [];
+*/
+
         }
     }
 }
