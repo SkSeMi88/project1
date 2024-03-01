@@ -1,5 +1,6 @@
 <?php
 
+// return["KIVS"=>"йцукенгшщзхъ"];
 return[
     "KIVS" => [
         " "=>" ",
