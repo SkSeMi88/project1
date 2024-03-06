@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('inn');
 
-            $table->boolean('is_active')->nullable();
+            $table->boolean('is_actived')->nullable();
             $table->timestamp('actived_at')->nullable();
 
-            $table->boolean('is_deactive')->nullable();
+            $table->boolean('is_deactived')->nullable();
             $table->timestamp('deactived_at')->nullable();
         });
     }

@@ -11,9 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('management', function (Blueprint $table) {
+        Schema::create('managements', function (Blueprint $table) {
+
             $table->id();
             $table->timestamps();
+
+            $table->string('name');
+
+            $table->boolean('is_entered')->nullable();
+            $table->timestamp('entered_at')->nullable();
+
+            $table->boolean('is_excluded')->nullable();
+            $table->timestamp('excluded_at')->nullable();
         });
     }
 
@@ -22,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('management');
+        Schema::dropIfExists('managements');
     }
 };

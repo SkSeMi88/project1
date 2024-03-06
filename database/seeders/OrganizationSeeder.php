@@ -34,7 +34,7 @@ class OrganizationSeeder extends Seeder
 
 
         foreach($orgs as $org){
-            DB::table('orgs')->insert(
+            DB::table('organizations')->insert(
                 $org
             );
         };
