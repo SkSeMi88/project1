@@ -10,6 +10,8 @@ use Illuminate\View\View;
 
 use Illuminate\Support\Str;
 
+use App\Models\Position;
+
 
 class TestController extends Controller
 {
@@ -85,6 +87,13 @@ class TestController extends Controller
             echo "<br>", $email_login;
 
 
+        }
+
+        // dd(Position::all());
+        $Positions  = Position::all();
+        foreach ($Positions AS $position){
+            // dump($position['attributes']);
+            dump($position->toArray());
         }
 
     }
