@@ -16,7 +16,7 @@ use App\Http\Controllers\TestController;
 */
 
 Route::get('/test', [TestController::class, 'index'])->name('test');
-Route::post('/test', [TestController::class, 'store'])->name('store');
+Route::post('/users/create', [TestController::class, 'store'])->name('store');
 
 
 Route::get('/', function () {

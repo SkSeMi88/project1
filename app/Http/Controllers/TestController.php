@@ -134,7 +134,13 @@ class TestController extends Controller
     public function store(Request $request)
     {
         $guarded = [];
-        $data = $request[];
+        $validated = $request->valideate([
+            'org'       => ['required', 'string', 'max:256'],
+            'committee' => ['required', 'string', 'max:256'],
+            'manager'   => ['required', 'string', 'max:256'],
+            'depart'    => ['required', 'string', 'max:256'],
+        ]);
+        dump($validated);
     }
 
 }

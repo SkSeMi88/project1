@@ -62,7 +62,7 @@
             <div name="company_block" id="company_block">
 
                 <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
-                <input list="company-list"  name="company" id="company" value="" style="width:50%" required>
+                <input list="company-list"  name="org" id="org" value="" style="width:50%" required>
 
                 <datalist id="company-list" style="width:50%">
                     {{-- <option>Администрация Петрозаводского городского округа</option>
@@ -100,9 +100,9 @@
             </div>
 
             <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
-            <input list="comite-list"  name="comite" id="comite" value="" style="width:50%"  required>
+            <input list="committee-list"  name="committee" id="committee" value="" style="width:50%"  required>
 
-            <datalist id="comite-list" style="width:50%">
+            <datalist id="committee-list" style="width:50%">
 
                 <option>Нет</option>
                 {{-- <option>Аппарат</option>
@@ -131,9 +131,9 @@
 
 
             <input type="button" name="login-btn" id="login-btn" value="Х" class="reset-field">
-            <input list="management-list"  name="management" id="management" value="" style="width:50%"  required>
+            <input list="manager-list"  name="manager" id="manager" value="" style="width:50%"  required>
 
-            <datalist id="management-list" style="width:50%">
+            <datalist id="manager-list" style="width:50%">
 
                 <option>Нет</option>
                 {{-- <option>Информационно аналитическое управление</option>
