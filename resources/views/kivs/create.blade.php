@@ -65,7 +65,7 @@
                 <input list="company-list"  name="company" id="company" value="" style="width:50%" required>
 
                 <datalist id="company-list" style="width:50%">
-                    <option>Администрация Петрозаводского городского округа</option>
+                    {{-- <option>Администрация Петрозаводского городского округа</option>
                     <option>МУ "ХЭС"</option>
                     <option>МКУ "ЦУИ"</option>
                     <option>МКУ "ЦБО"</option>
@@ -76,11 +76,18 @@
                     <option>МКУ "Ритуал"</option>
                     <option>МКУ "Петроснаб"</option>
                     <option>МКУ "Служба заказчика"</option>
-                    <option>МКУ "ЦИБС"</option>
+                    <option>МКУ "ЦИБС"</option> --}}
 
                     {{-- АПГО, МУ "ХЭС", МКУ "ЦУИ", МКУ "ЕДДС", МКУ "Ритуал", МКУ "Петроснаб", МКУ "Служба заказчика", МКУ "МАП", МКУ "ЦБО", МКУ "УКС", МКУ "ЖКХ", Бибилиотека --}}
 
+                    <?php
+                    foreach($orgs As $org){
+                        echo '<option>'.$org['name'].'</option>';
+                    }
+                    ?>
+
                 </datalist>
+
 
             </div>
             {{-- <br>
@@ -98,12 +105,18 @@
             <datalist id="comite-list" style="width:50%">
 
                 <option>Нет</option>
-                <option>Аппарат</option>
+                {{-- <option>Аппарат</option>
                 <option>Комитет финансов</option>
                 <option>Комитет Жилищно-комунального хозяйства</option>
                 <option>Комитет градостроительства и землепользования</option>
                 <option>Комитет социального развития</option>
-                <option>Комитет экономического развития</option>
+                <option>Комитет экономического развития</option> --}}
+
+                <?php
+                foreach($kommittees As $kommittee){
+                    echo '<option>'.$kommittee['name'].'</option>';
+                }
+                ?>
 
             </datalist>
 
@@ -123,11 +136,18 @@
             <datalist id="management-list" style="width:50%">
 
                 <option>Нет</option>
-                <option>Информационно аналитическое управление</option>
+                {{-- <option>Информационно аналитическое управление</option>
                 <option>Управление культуры</option>
                 <option>Управление образования</option>
                 <option>Управление ЖКХ</option>
-                <option>Управление дорожного хозяйства</option>
+                <option>Управление дорожного хозяйства</option> --}}
+
+                <?php
+                foreach($managers As $manager){
+                    echo '<option>'.$manager['name'].'</option>';
+                }
+                ?>
+
             </datalist>
 
             {{-- <br>
@@ -145,11 +165,17 @@
             <datalist id="department-list" style="width:50%">
 
                 <option>Нет</option>
-                <option>Пресс центр</option>
+                {{-- <option>Пресс центр</option>
                 <option>Финансовый отдел</option>
                 <option>Отдел доходов бюджета</option>
                 <option>Отдел по претензионой исковой работе</option>
-                <option>Отдел технологического и программного обеспечения</option>
+                <option>Отдел технологического и программного обеспечения</option> --}}
+
+                <?php
+                foreach($departments As $department){
+                    echo '<option>'.$department['name'].'</option>';
+                }
+                ?>
             </datalist>
 
             {{-- <br>
@@ -198,11 +224,18 @@
                         <datalist id="comite-list" style="width:50%">
 
                             <option>Нет</option>
-                            <option>Аппарат</option>
+                            {{-- <option>Аппарат</option>
                             <option>Комитет финансов</option>
                             <option>Комитет градостроительства и землепользования</option>
                             <option>Комитет социального развития</option>
-                            <option>Комитет экономического развития</option>
+                            <option>Комитет экономического развития</option> --}}
+
+                            <?php
+                            foreach($kommittees As $kommittee){
+                                echo '<option>'.$kommittee['name'].'</option>';
+                            }
+                            ?>
+
 
                         </datalist>
 
@@ -221,11 +254,17 @@
                         <datalist id="management-list" style="width:50%">
 
                             <option>Нет</option>
-                            <option>Информационно аналитическое управление</option>
+                            {{-- <option>Информационно аналитическое управление</option>
                             <option>Управление культуры</option>
                             <option>Управление образования</option>
                             <option>Управление ЖКХ</option>
-                            <option>Управление дорожного хозяйства</option>
+                            <option>Управление дорожного хозяйства</option> --}}
+
+                            <?php
+                            foreach($managers As $manager){
+                                echo '<option>'.$manager['name'].'</option>';
+                            }
+                            ?>
                         </datalist>
 
                         <br>
@@ -242,10 +281,15 @@
                         <datalist id="department-list" style="width:50%">
 
                             <option>Нет</option>
-                            <option>Финансовый отдел</option>
+                            {{-- <option>Финансовый отдел</option>
                             <option>Отдел доходов бюджета</option>
                             <option>Отдел по претензионой исковой работе</option>
-                            <option>Отдел технологического и программного обеспечения</option>
+                            <option>Отдел технологического и программного обеспечения</option> --}}
+                            <?php
+                            foreach($departments As $department){
+                                echo '<option>'.$department['name'].'</option>';
+                            }
+                            ?>
                         </datalist>
 
                     </div>

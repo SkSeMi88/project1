@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 use App\Models\User;
@@ -11,6 +10,11 @@ use Illuminate\View\View;
 use Illuminate\Support\Str;
 
 use App\Models\Position;
+
+use App\Models\Organization;
+use App\Models\Kommittee;
+use App\Models\Manager;
+use App\Models\Department;
 
 
 class TestController extends Controller
@@ -89,13 +93,48 @@ class TestController extends Controller
 
         }
 
-        // dd(Position::all());
-        $Positions  = Position::all();
-        foreach ($Positions AS $position){
+        // // dd(Position::all());
+        // $Positions  = Position::all();
+        // foreach ($Positions AS $position){
+        //     // dump($position['attributes']);
+        //     dump($position->toArray());
+        // }
+        $orgs  = Organization::all();
+        dump($orgs->toArray());
+        foreach ($orgs AS $org){
             // dump($position['attributes']);
-            dump($position->toArray());
+            dump($org->toArray());
+        }
+        $kommittees  = Kommittee::all();
+        foreach ($kommittees AS $kommittee){
+            // dump($position['attributes']);
+            dump($kommittee->toArray());
+        }
+        $managers  = Manager::all();
+        foreach ($managers AS $manager){
+            // dump($position['attributes']);
+            dump($manager->toArray());
+        }
+        $departments  = Department::all();
+        foreach ($departments AS $department){
+            // dump($position['attributes']);
+            dump($department->toArray());
         }
 
+        $positions  = Position::all()->toArray();
+        dump($positions);
+
+        return(view('kivs.create',['orgs'=>$orgs,'kommittees'=>$kommittees,'managers'=>$managers,'departments'=>$departments,'positions'=>$positions,]));
+    }
+
+    //
+    /**
+     * Display the user's profile form.
+     */
+    public function store(Request $request)
+    {
+        $guarded = [];
+        $data = $request[];
     }
 
 }
