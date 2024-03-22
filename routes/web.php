@@ -15,12 +15,20 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/test', [TestController::class, 'index'])->name('test');
-Route::post('/users/create', [TestController::class, 'store'])->name('store');
+
+// Route::get('/test', [TestController::class, 'index'])->name('test');
+// Route::post('/test', [TestController::class, 'store'])->name('users.store');
+
+Route::get('/users/create', [TestController::class, 'index'])->name('users.create');
+Route::post('/users/create', [TestController::class, 'store'])->name('users.store');
 
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/test2', function () {
+    return view('kivs.test');
 });
 
 Route::get('/create', function () {

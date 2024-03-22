@@ -29,15 +29,15 @@ class TestController extends Controller
 
         $KIVS   = config('kivs.KIVS');
 
-        print_r($KIVS);
+        // print_r($KIVS);
 
         $users = [
-            "Скваж Сергей Михайлович",
-            "Васильев Сергей Дмитриевич",
-            "Алешин Александр Сергеевич",
-            "Бабич Владимир Владимирович",
-            "Сивко Лиана Зурабовна",
-            "Матюшина Лилия Васильевна"
+            // "Скваж Сергей Михайлович",
+            // "Васильев Сергей Дмитриевич",
+            // "Алешин Александр Сергеевич",
+            // "Бабич Владимир Владимирович",
+            // "Сивко Лиана Зурабовна",
+            // "Матюшина Лилия Васильевна"
         ];
 
 
@@ -93,38 +93,34 @@ class TestController extends Controller
 
         }
 
-        // // dd(Position::all());
-        // $Positions  = Position::all();
-        // foreach ($Positions AS $position){
-        //     // dump($position['attributes']);
-        //     dump($position->toArray());
-        // }
+
         $orgs  = Organization::all();
-        dump($orgs->toArray());
+        // dump($orgs->toArray());
         foreach ($orgs AS $org){
             // dump($position['attributes']);
-            dump($org->toArray());
+            // dump($org->toArray());
         }
         $kommittees  = Kommittee::all();
         foreach ($kommittees AS $kommittee){
             // dump($position['attributes']);
-            dump($kommittee->toArray());
+            // dump($kommittee->toArray());
         }
         $managers  = Manager::all();
         foreach ($managers AS $manager){
             // dump($position['attributes']);
-            dump($manager->toArray());
+            // dump($manager->toArray());
         }
         $departments  = Department::all();
         foreach ($departments AS $department){
             // dump($position['attributes']);
-            dump($department->toArray());
+            // dump($department->toArray());
         }
 
         $positions  = Position::all()->toArray();
-        dump($positions);
+        // dump($positions);
 
         return(view('kivs.create',['orgs'=>$orgs,'kommittees'=>$kommittees,'managers'=>$managers,'departments'=>$departments,'positions'=>$positions,]));
+        // return(view('kivs.test'));
     }
 
     //
@@ -133,14 +129,37 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        $guarded = [];
-        $validated = $request->valideate([
-            'org'       => ['required', 'string', 'max:256'],
-            'committee' => ['required', 'string', 'max:256'],
-            'manager'   => ['required', 'string', 'max:256'],
-            'depart'    => ['required', 'string', 'max:256'],
-        ]);
-        dump($validated);
+        echo "Получена форма создания пользователя";
+        $validated = validator($request->all(),[
+            'fname' => ['required', 'string', 'max:100'],
+            'name' => ['required', 'string', 'max:100'],
+            'sname' => ['required', 'string', 'max:100'],
+
+        ])->validate();
+
+        dd($validated);
+        //dump($request);
+        // $guarded = [];
+        // $validated = $request->validate([
+        //     'org'       => ['required', 'string', 'max:256'],
+        //     'committee' => ['required', 'string', 'max:256'],
+        //     'manager'   => ['required', 'string', 'max:256'],
+        //     'depart'    => ['required', 'string', 'max:256'],
+        // ]);
+        // dump($validated);
+    }
+    public function store2(Request $request)
+    {
+        echo "Получена форма создания пользователя";
+        dump($request);
+        // $guarded = [];
+        // $validated = $request->validate([
+        //     'org'       => ['required', 'string', 'max:256'],
+        //     'committee' => ['required', 'string', 'max:256'],
+        //     'manager'   => ['required', 'string', 'max:256'],
+        //     'depart'    => ['required', 'string', 'max:256'],
+        // ]);
+        // dump($validated);
     }
 
 }

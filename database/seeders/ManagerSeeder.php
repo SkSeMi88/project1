@@ -43,7 +43,7 @@ class ManagerSeeder extends Seeder
         ];
 
         foreach($managements as $management){
-            DB::table('managements')->insert(
+            DB::table('managers')->insert(
                 $management
             );
         };
